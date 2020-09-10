@@ -1,0 +1,40 @@
+.company {
+    margin: 0 auto 116px;
+    background-color: var(--light-blue);
+    position: relative;
+    z-index: 2;
+}
+
+.company__content {
+    width: 62.5%;
+    margin: 0 auto;
+}
+
+.company__caption {
+    font-size: 80px;
+    line-height: 98px;
+    color: var(--white-text);
+    margin: 0 0 41px 0;
+}
+
+.company__target {
+    font-size: 24px;
+    color: var(--white-text);
+    font-weight: 200;
+    margin: 0 0 55px 0;
+    width: 65%;
+    line-height: 33px;
+}
+
+.company__link {
+    display: block;
+    width:  18.3%;
+    background-color: var(--white-text);
+    text-align: center;
+    padding: 16px 0 14px 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--dark-blue);
+    font-weight: 600;
+    border-radius: 3px;
+}

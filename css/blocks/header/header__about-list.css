@@ -1,0 +1,15 @@
+.header__about-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 244px 0 0;
+    padding: 0;
+    width: 41.6%;
+}
+
+.about-list__item:not(:last-child) {
+    margin: 0;
+}
+
+.about-list__item a {
+    color: var(--white-text-transparent);
+}

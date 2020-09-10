@@ -1,0 +1,28 @@
+.header-wrapper {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1920px;
+    background-color: transparent;
+    transition: var(--transition);
+    min-height: 130px;
+}
+
+.header-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #EBEBEB;
+    top: 57px;
+    opacity: 0.4;
+}
+
+.header {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 23px;
+    padding-bottom: 26px;
+}

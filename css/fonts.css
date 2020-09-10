@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Avenir Next Cyr;
+    font-display: swap;
+    src: url('/fonts/AvenirNextCyr-Regular.woff') format("woff"),
+    url('/fonts/AvenirNextCyr-Regular.woff2') format("woff2");
+    font-style: normal;
+    font-weight: normal;
+}

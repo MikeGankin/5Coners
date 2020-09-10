@@ -1,0 +1,30 @@
+.header__lang {
+    width: 5%;
+    margin:  0 88px 0 0;
+}
+
+.lang__btn {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    position: relative;
+    color: var(--white-text-transparent);
+}
+
+.lang__btn--en {
+    margin-right: 14px;
+    margin-left: -1px;
+}
+
+.lang__btn--en::after {
+   content: '';
+   position: absolute;
+   width: 1px;
+   height: 14px;
+   top: 0;
+   left: 27px;
+   transform: rotate(22deg);
+   background-color: var(--white-text-transparent);
+}

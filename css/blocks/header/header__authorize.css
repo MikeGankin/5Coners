@@ -1,0 +1,27 @@
+.header__authorize {
+    width: 11%;
+    position: relative;
+}
+
+.authorize__btn {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: var(--white-text-transparent);
+}
+
+.authorize__btn--login {
+    margin: 0 15px 0 0;
+}
+
+.authorize__btn--login::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    background-color: var(--white-text-transparent);
+    top: 0;
+    left: 41px;
+}
