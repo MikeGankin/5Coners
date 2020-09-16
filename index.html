@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transhub 24</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -37,18 +37,35 @@
                     </div>
                 </div>
                 <nav class="header__nav nav">
+                    <button class="nav__burger burger" type="button">
+                        <svg class="burger__open" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	                        viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+                            <g>
+                                <rect x="0" y="277.333" width="384" height="42.667"/>
+                                <rect x="0" y="170.667" width="384" height="42.667"/>
+                                <rect x="0" y="64" width="384" height="42.667"/>
+                            </g>
+                        </svg>
+                        <svg class="burger__close" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	                        viewBox="0 0 298.667 298.667" style="enable-background:new 0 0 298.667 298.667;" xml:space="preserve">
+                            <g>
+                                <polygon points="298.667,30.187 268.48,0 149.333,119.147 30.187,0 0,30.187 119.147,149.333 0,268.48 30.187,298.667 
+                                    149.333,179.52 268.48,298.667 298.667,268.48 179.52,149.333"/>
+                            </g>
+                        </svg>
+                    </button>
                     <ul class="nav__list">
-                        <li class="nav__item">
+                        <li class="nav__item nav__item--logo">
                             <a href="#">
-                                <img class="nav__img" src="img/logo.png" srcset="img/logo@2x.png 2x" alt="">
+                                <img class="nav__img" src="img/logo.png" srcset="img/logo2x.png" width="104" height="40" alt="Логотип компании">
                             </a>
                         </li>
-                        <li class="nav__item nav__item--select">
+                        <li class="nav__item nav__item--select first-select">
                             <a class="" href="#">Найти перевозчика</a>
                             <svg width="11" height="6" viewBox="0 0 11 6" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 5.11111L0.44 0L0 0.444444L5.5 6L11 0.444444L10.56 0L5.5 5.11111Z"/>
                             </svg>
-                            <ul class="nav__select select-list">
+                            <ul class="nav__select select-list first-list">
                                 <li class="select-list__item"><a href="">Перевозчик 1</a></li>
                                 <li class="select-list__item"><a href="">Перевозчик 1</a></li>
                                 <li class="select-list__item"><a href="">Перевозчик 1</a></li>
@@ -63,15 +80,15 @@
                         <li class="nav__item">
                             <a href="#">Грузоотправители</a>
                         </li>
-                        <li class="nav__item nav__item--select">
+                        <li class="nav__item nav__item--select second-select">
                             <a class="" href="#">Покупка и аренда техники</a>
                             <svg width="11" height="6" viewBox="0 0 11 6" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 5.11111L0.44 0L0 0.444444L5.5 6L11 0.444444L10.56 0L5.5 5.11111Z"/>
                             </svg>
-                            <ul class="nav__select select-list">
+                            <ul class="nav__select select-list second-list">
                                 <li class="select-list__item"><a href="">Арендатор 1</a></li>
-                                <li class="select-list__item"><a href="">Арендатор 1</a></li>
-                                <li class="select-list__item"><a href="">Арендатор 1</a></li>
+                                <li class="select-list__item"><a href="">Арендатор 2</a></li>
+                                <li class="select-list__item"><a href="">Арендатор 3</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -82,13 +99,13 @@
         <div class="main-wrapper">
             <main class="page__main main">
                 <div class="main__poster poster">
-                    <img src="/img/svg/poster.svg" width="2740" height="1465" alt="">                   
+                    <img src="img/svg/poster.svg" alt="Главное изображение страницы">                 
                 </div>
                 <div class="main__content">
                     <section class="company">
                         <div class="company__content">
                             <h1 class="company__caption">Компания Transhub 24</h1>
-                            <p class="company__target">Наша цель — свести контакты грузоперевозчиков 
+                            <p class="company__target">Наша цель - свести контакты грузоперевозчиков 
                             и грузовладельцев в одном месте, сделав их максимально 
                             удобными.
                             </p>
@@ -101,34 +118,42 @@
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
-                                <div class="swiper-slide"></div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-slide__content">
-                                        <h2>Авторизуйтесь, в личный кабинет грузоотправителя</h2>
-                                        <img src="img/picture.png" srcset="img/picture@2x.png 2x" alt="">
-                                        <form class="swiper-slide__form form" action="post">
-                                            <ul class="form__fields">
-                                                <li class="form__field form__field--login">
-                                                    <label for="login">Email или Номер телефона</label>
-                                                    <input type="text" id="login">
-                                                </li>
-                                                <li class="form__field form__field--password">
-                                                    <label for="password">Пароль</label>
-                                                    <input type="text" id="password">
-                                                </li>
-                                                <li class="form__field form__field--btns">
-                                                    <button class="swiper-slide__btn swiper-slide__btn--registration" type="button">Регистрация</button>
-                                                    <button class="swiper-slide__btn swiper-slide__btn--login" type="submit">Вход</button>
-                                                </li>
-                                            </ul>
-                                            <a href="#">Забыли пароль?</a>
-                                        </form>
-                                        <p class="swiper-slide__description">Получите удобный инструмент размещения заявок 
-                                            на перевозку грузов и их отслеживания
-                                        </p>
+                                <div class="swiper-slide slide-1">
+                                    <div class="swiper-slide__content content">
+                                        <div class="content__info">
+                                            <h2>Авторизуйтесь, в личный кабинет грузоотправителя</h2>
+                                            <img src="img/picture.png" srcset="img/picture2x.png 2x" alt="">
+                                            <p>Получите удобный инструмент размещения заявок 
+                                                на перевозку грузов и их отслеживания
+                                            </p>
+                                        </div>
+                                        <div class="content__form">
+                                            <form class="swiper-slide__form form" action="post">
+                                                <ul class="form__fields">
+                                                    <li class="form__field form__field--login">
+                                                        <label for="login">Email или Номер телефона</label>
+                                                        <input type="text" id="login">
+                                                    </li>
+                                                    <li class="form__field form__field--password">
+                                                        <label for="password">Пароль</label>
+                                                        <input type="text" id="password">
+                                                    </li>
+                                                    <li class="form__field form__field--btns">
+                                                        <button class="form__btn form__btn--registration" type="button">Регистрация</button>
+                                                        <button class="form__btn form__btn--login" type="submit">Вход</button>
+                                                    </li>
+                                                </ul>
+                                                <a href="#">Забыли пароль?</a>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide slide-2">
+                                    <span>Я второй слайд</span>
+                                </div>
+                                <div class="swiper-slide slide-3">
+                                    <span>Я третий слайд</span>
+                                </div>
                             </div>
                              <!-- Navigation buttons -->
                              <div class="swiper-button-prev">

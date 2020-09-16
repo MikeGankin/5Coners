@@ -1,4 +1,19 @@
 .header__phone {
    width: 11%;
-   margin: 0 42px 0 0;
+   margin: 3px 42px 0 0;
+   letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+   .header__phone {
+       order: 2;
+       width: 20%;
+       margin-top: 1px;
+   }
+}
+
+@media (max-width: 480px) {
+   .header__phone {
+       margin-top: 0;
+   }
 }

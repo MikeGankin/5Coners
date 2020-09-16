@@ -1,6 +1,26 @@
 .main__poster {
-    padding-top: 10px;
-    height: 1315px;
+    max-height: 1315px;
     position: relative;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .main__poster {
+        max-height: 742px;
+        padding-top: 152px;
+    }
+
+    .main__poster img {
+        width: 42%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main__poster {
+        max-height: 480px;
+    }
+
+    .main__poster img {
+        width: 100%;
+    }
 }

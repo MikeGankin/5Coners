@@ -1,6 +1,15 @@
 .header__lang {
     width: 5%;
-    margin:  0 88px 0 0;
+    margin:  -3px 88px 0 0;
+}
+
+@media (max-width: 768px) {
+    .header__lang {
+        order: 1;
+        width: 9%;
+        margin-right: 60px;
+        margin-top: -2px;
+    }
 }
 
 .lang__btn {
@@ -10,21 +19,35 @@
     padding: 0;
     text-transform: uppercase;
     position: relative;
+    font-size: 14px;
     color: var(--white-text-transparent);
 }
 
 .lang__btn--en {
     margin-right: 14px;
-    margin-left: -1px;
 }
 
-.lang__btn--en::after {
+.lang {
+    position: relative;
+}
+
+.lang::after {
    content: '';
    position: absolute;
    width: 1px;
    height: 14px;
-   top: 0;
+   top: 2px;
    left: 27px;
    transform: rotate(22deg);
    background-color: var(--white-text-transparent);
 }
+
+@media (max-width: 480px) {
+    .header__lang {
+        width: 13%;
+        margin-left: 250px;
+        margin-right: 0;
+        margin-bottom: 48px;
+    }
+}
+

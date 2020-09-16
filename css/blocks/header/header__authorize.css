@@ -1,6 +1,8 @@
 .header__authorize {
-    width: 11%;
+    width: 12%;
     position: relative;
+    margin-right: -8px;
+    margin-top: -2px;
 }
 
 .authorize__btn {
@@ -10,18 +12,35 @@
     padding: 0;
     position: relative;
     color: var(--white-text-transparent);
+    font-size: 14px;
 }
 
 .authorize__btn--login {
-    margin: 0 15px 0 0;
+    margin: 0 12px 0 0;
 }
 
-.authorize__btn--login::after {
+.header__authorize::after {
     content: '';
     position: absolute;
     width: 1px;
     height: 14px;
     background-color: var(--white-text-transparent);
-    top: 0;
-    left: 41px;
+    top: 2px;
+    left: 42px;
+}
+
+@media (max-width: 768px) {
+    .header__authorize {
+        order: 3;
+        width: 20%;
+        margin-top: -3px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__authorize {
+        width: 50%;
+        margin-bottom: 10px;
+    }
 }

@@ -22,6 +22,7 @@ ul {
 img {
     display: block;
     max-width: 100%;
+    object-fit: cover;
 }
 
 .container {
@@ -31,4 +32,24 @@ img {
     background-image: url('/img/stars.png'), url('/img/sky.png');
     background-repeat: no-repeat, no-repeat;
     background-position: 0 128px, 0 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .container {
+        background-image: url('/img/stars2x.png'), url('/img/sky2x.png');
+        background-size: contain;
+    }
+};
+
+@media (max-width: 768px) {
+    .container {
+        width: 768px;
+        background-position: center 0, center 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 480px;
+    }
 }
