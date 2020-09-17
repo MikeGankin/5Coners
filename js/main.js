@@ -60,7 +60,7 @@ checkClientWidth();
 var onDocumentScroll = function () {
     var img = document.querySelector('.nav__img');
     var scrolled = window.pageYOffset;
-    if (scrolled >= 10) {
+    if (scrolled > 0) {
         header.classList.add('scrolled');
         img.style.opacity = '0';
         img.src = 'img/scroll-logo.png';
@@ -79,35 +79,37 @@ window.addEventListener('scroll', onDocumentScroll);
 burger.addEventListener('click', function () {
     header.classList.toggle('menu-opened');
 });
-firstSelect.addEventListener('mouseover', function (e) {
-    var target = e.target;
-    if (target) {
-        header.style.minHeight = '245px';
-        firstArrow.style.transform = 'rotate(180deg)';
-        setTimeout(function(){
-            showList(firstList, firstSelect);
-        }, TIME_OUT)
-    }
-});
-firstSelect.addEventListener('mouseout', function (e) {
-    var target = e.target;
-    if (target) {
-        firstArrow.style.transform = '';
-        hideList(firstList, firstSelect);
-        header.style.minHeight = '130px';
-    }
-});
-secondSelect.addEventListener('mouseover', function (e) {
-    var target = e.target;
-    if (target) {
-        header.style.minHeight = '245px';
-        secondArrow.style.transform = 'rotate(180deg)';
-        setTimeout(function(){
-            showList(secondList, secondSelect);
-        }, TIME_OUT)
-    }
-});
-secondSelect.addEventListener('mouseout', function (e) {
+
+var Listeners = function (show, hide) {
+    firstSelect.addEventListener(show, function (e) {
+        var target = e.target;
+        if (target) {
+            header.style.minHeight = '245px';
+            firstArrow.style.transform = 'rotate(180deg)';
+            setTimeout(function(){
+                showList(firstList, firstSelect);
+            }, TIME_OUT)
+        }
+    });
+    firstSelect.addEventListener(hide, function (e) {
+        var target = e.target;
+        if (target) {
+            firstArrow.style.transform = '';
+            hideList(firstList, firstSelect);
+            header.style.minHeight = '130px';
+        }
+    });
+    secondSelect.addEventListener(show, function (e) {
+        var target = e.target;
+        if (target) {
+            header.style.minHeight = '245px';
+            secondArrow.style.transform = 'rotate(180deg)';
+            setTimeout(function(){
+                showList(secondList, secondSelect);
+            }, TIME_OUT)
+        }
+    });
+    secondSelect.addEventListener(hide, function (e) {
     var target = e.target;
     if (target) {
         secondArrow.style.transform = '';
@@ -115,7 +117,16 @@ secondSelect.addEventListener('mouseout', function (e) {
         header.style.minHeight = '130px';
     }
 });
+}
 
+var checkDevice = function () {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        Listeners('click')
+    } else {
+        Listeners('mouseenter', 'mouseleave');
+    }
+}
+checkDevice();
 
 var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
