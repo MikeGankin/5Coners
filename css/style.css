@@ -1023,7 +1023,7 @@ img {
 }
 
 .scrolled .nav__link:active {
-    color: #20a2ed
+    color: #0180e0;
 }
 
 .scrolled a:hover+svg {
