@@ -61,7 +61,7 @@ img {
     width: 1920px;
     overflow: hidden;
     margin: 0 auto;
-    background-image: url(../img/stars.png), url(../img/sky.png); 
+    background-image: url(/5Coners/img/stars.png), url(../img/sky.png); 
     background-repeat: no-repeat, no-repeat;
     background-position: 0 128px, 0 0
 }
