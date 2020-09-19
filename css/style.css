@@ -2,7 +2,7 @@
     font-family: 'Avenir Next Cyr', sans-serif;
     font-display: swap;
     src: url(../fonts/AvenirNextCyr-Regular.woff) format("woff"), 
-         url(/fonts/AvenirNextCyr-Regular.woff2) format("woff2");
+         url(../fonts/AvenirNextCyr-Regular.woff2) format("woff2");
     font-style: normal;
     font-weight: 400
 }
