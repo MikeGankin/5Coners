@@ -61,7 +61,7 @@ img {
     width: 1920px;
     overflow: hidden;
     margin: 0 auto;
-    background-image: url(/img/stars.png), url(/img/sky.png); 
+    background-image: url(../img/stars.png), url(../img/sky.png); 
     background-repeat: no-repeat, no-repeat;
     background-position: 0 128px, 0 0
 }
@@ -70,7 +70,7 @@ img {
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .container {
-        background-image: url(/img/stars2x.png), url(/img/sky2x.png);
+        background-image: url(../img/stars2x.png), url(../img/sky2x.png);
         background-size: contain
     }
 }
