@@ -1011,7 +1011,12 @@ img {
 
 .nav__link:hover,
 .select-list__link:hover {
-    opacity: .8
+    opacity: 0.9
+}
+
+.nav__link:active,
+.select-list__link:active {
+    opacity: 0.8
 }
 
 .scrolled button:hover,
