@@ -1,9 +1,0 @@
-.steps {
-    padding-bottom: 147px;
-}
-
-@media (max-width: 480px) {
-    .steps {
-        padding-bottom: 46px;
-    }
-}
