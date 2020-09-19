@@ -899,6 +899,11 @@ img {
     .swiper-wrapper {
         width: 432px
     }
+
+    .swiper-slide {
+        min-height: 537px;
+    }
+
     .content__info h2,
     .swiper-slide span {
         font-size: 36px
