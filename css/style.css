@@ -255,7 +255,7 @@ img {
 
 @media (max-width: 480px) {
     .header__phone {
-        margin-right: 0;
+        margin-right: -60px;
         width: 50%;
     }
 }
