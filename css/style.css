@@ -145,7 +145,7 @@ img {
 
 @media (max-width: 480px) {
     .header-wrapper {
-        min-height: 178px
+        min-height: 151px
     }
     .header__logo {
         left: 90px
@@ -233,7 +233,7 @@ img {
         width: 14%;
         margin-left: 250px;
         margin-right: 0;
-        margin-bottom: 30px
+        margin-bottom: 45px
     }
 }
 
@@ -306,7 +306,7 @@ img {
 
 @media (max-width: 480px) {
     .header__about-list {
-        margin-top: 15px
+        margin-top: 10px
     }
 }
 
