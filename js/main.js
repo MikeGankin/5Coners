@@ -67,19 +67,15 @@ const onDocumentScroll = () => {
 const onSelectClick = (target) => {
     if (target.closest('.first-select')) {
         header.classList.toggle('select-opened');
-        setTimeout(() => {
-            firstSelect.classList.toggle('opened');
-            firstList.classList.toggle('visible');
-            firstArrow.classList.toggle('active');
-        }, TIME_OUT);
+        firstSelect.classList.toggle('opened');
+        firstList.classList.toggle('visible');
+        firstArrow.classList.toggle('active');
     }
     if (target.closest('.second-select')) {
+        header.classList.toggle('select-opened');
         secondSelect.classList.toggle('opened');
         secondList.classList.toggle('visible');
         secondArrow.classList.toggle('active');
-        setTimeout(() => {
-            header.classList.toggle('select-opened');
-        }, TIME_OUT);
     }
 } 
 
