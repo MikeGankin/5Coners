@@ -22,17 +22,34 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 84px;
+    top: 371px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    stroke: #D0D5D9;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg{
+    width: 42px;
+    height: 84px;
 }
 
 .swiper-button-prev {
     left: 214px;
     transform: rotate(180deg);
+    cursor: default;
+}
+
+.swiper-button-prev svg {
+    stroke: rgba(208, 213, 217, 0.3);
 }
 
 .swiper-button-next {
     right: 216px;
+    stroke: #D0D5D9;
 }
 
 .swiper-pagination-bullet {
@@ -72,6 +89,7 @@
     color: #004460;
     margin-top: 0;
     margin-bottom: 33px;
+    font-weight: 800;
 }
 
 .content__info p {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transhub 24</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="/img/ico.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -19,16 +20,16 @@
                     <p class="header__phone">+7(87922)2-63-10</p>
                     <ul class="header__about-list about-list">
                         <li class="about-list__item">
-                            <a href="#">О компании</a>
+                            <a class="about-list__link" href="#">О компании</a>
                         </li>
                         <li class="about-list__item">
-                            <a href="#">Рекламодателям</a>
+                            <a class="about-list__link" href="#">Рекламодателям</a>
                         </li>
                         <li class="about-list__item">
-                            <a href="#">База знаний</a>
+                            <a class="about-list__link" href="#">База знаний</a>
                         </li>
                         <li class="about-list__item">
-                            <a href="#">Контакты</a>
+                            <a class="about-list__link" href="#">Контакты</a>
                         </li>
                     </ul>
                     <div class="header__authorize authorize">
@@ -56,43 +57,45 @@
                     </button>
                     <ul class="nav__list">
                         <li class="nav__item nav__item--logo">
-                            <a href="#">
+                            <a class="nav__link" href="#">
                                 <img class="nav__img" src="img/logo.png" srcset="img/logo2x.png" width="104" height="40" alt="Логотип компании">
                             </a>
                         </li>
                         <li class="nav__item nav__item--select first-select">
-                            <a class="" href="#">Найти перевозчика</a>
+                            <a class="nav__link" href="#">Найти перевозчика</a>
                             <svg width="11" height="6" viewBox="0 0 11 6" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 5.11111L0.44 0L0 0.444444L5.5 6L11 0.444444L10.56 0L5.5 5.11111Z"/>
+                                <path clip-rule="evenodd" d="M5.5 5.11111L0.44 0L0 0.444444L5.5 6L11 0.444444L10.56 0L5.5 5.11111Z"/>
                             </svg>
                             <ul class="nav__select select-list first-list">
-                                <li class="select-list__item"><a href="">Перевозчик 1</a></li>
-                                <li class="select-list__item"><a href="">Перевозчик 1</a></li>
-                                <li class="select-list__item"><a href="">Перевозчик 1</a></li>
+                                <li class="select-list__item"><a class="select-list__link" href="">Перевозчик 1</a></li>
+                                <li class="select-list__item"><a class="select-list__link" href="">Перевозчик 1</a></li>
+                                <li class="select-list__item"><a class="select-list__link" href="">Перевозчик 1</a></li>
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="#">Поиск груза</a>
+                            <a class="nav__link" href="#">Поиск груза</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#">Перевозчики</a>
+                            <a class="nav__link" href="#">Перевозчики</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#">Грузоотправители</a>
+                            <a class="nav__link" href="#">Грузоотправители</a>
                         </li>
                         <li class="nav__item nav__item--select second-select">
-                            <a class="" href="#">Покупка и аренда техники</a>
+                            <a class="nav__link" href="#">Покупка и аренда техники</a>
                             <svg width="11" height="6" viewBox="0 0 11 6" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 5.11111L0.44 0L0 0.444444L5.5 6L11 0.444444L10.56 0L5.5 5.11111Z"/>
+                                <path clip-rule="evenodd" d="M5.5 5.11111L0.44 0L0 0.444444L5.5 6L11 0.444444L10.56 0L5.5 5.11111Z"/>
                             </svg>
                             <ul class="nav__select select-list second-list">
-                                <li class="select-list__item"><a href="">Арендатор 1</a></li>
-                                <li class="select-list__item"><a href="">Арендатор 2</a></li>
-                                <li class="select-list__item"><a href="">Арендатор 3</a></li>
+                                <li class="select-list__item"><a class="select-list__link" href="">Арендатор 1</a></li>
+                                <li class="select-list__item"><a class="select-list__link" href="">Арендатор 2</a></li>
+                                <li class="select-list__item"><a class="select-list__link" href="">Арендатор 3</a></li>
                             </ul>
                         </li>
+                        <li class="nav__item">
+                            <a class="nav__link nav__link--distribution" href="#">Разместить груз</a>
+                        </li>
                     </ul>
-                    <a class="nav__distribution" href="#">Разместить груз</a>
                 </nav>
             </header>
         </div>
@@ -156,16 +159,16 @@
                                 </div>
                             </div>
                              <!-- Navigation buttons -->
-                             <div class="swiper-button-prev">
+                             <button class="swiper-button-prev">
                                 <svg width="48" height="88" viewBox="0 0 48 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.99939 1.99988L43.9994 43.9999L1.99939 85.9999" stroke="#D0D5D9" stroke-width="5"/>
+                                    <path d="M1.99939 1.99988L43.9994 43.9999L1.99939 85.9999" stroke-width="5"/>
                                 </svg>                                  
-                             </div>
-                             <div class="swiper-button-next">
+                             </button>
+                             <button class="swiper-button-next">
                                 <svg width="48" height="88" viewBox="0 0 48 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.99939 1.99988L43.9994 43.9999L1.99939 85.9999" stroke="#D0D5D9" stroke-width="5"/>
+                                    <path d="M1.99939 1.99988L43.9994 43.9999L1.99939 85.9999" stroke-width="5"/>
                                 </svg>                                    
-                             </div>
+                            </button>
                             <!-- Pagination -->
                             <div class="swiper-pagination"></div>
                         </div>

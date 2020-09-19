@@ -1,6 +1,7 @@
 .header__lang {
     width: 5%;
     margin:  -3px 88px 0 0;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {

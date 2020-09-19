@@ -1,65 +1,54 @@
-var header = document.querySelector('.header-wrapper');
-var burger = document.querySelector('.nav__burger');
-var navItemLogo = document.querySelector('.nav__item--logo');
-var headerInfo = document.querySelector('.header__info');
-var burgerOpen = document.querySelector('.burger__open');
-var burgerClosed = document.querySelector('.burger__closed');
-var firstSelect = document.querySelector('.first-select');
-var secondSelect = document.querySelector('.second-select');
-var navItemSelect = document.querySelectorAll('.nav__item--select');
-var selectList = document.querySelectorAll('.select-list');
-var firstList = document.querySelector('.first-list');
-var secondList = document.querySelector('.second-list');
-var firstArrow = document.querySelector('.first-select svg');
-var secondArrow = document.querySelector('.second-select svg');
-var navDistribution = document.querySelector('.nav__distribution');
-var contentForm = document.querySelector('.content__form');
-var slide2 = document.querySelector('.slide-2');
-var TIME_OUT = 300;
+const header = document.querySelector('.header-wrapper'),
+      burger = document.querySelector('.nav__burger'),
+      navItemLogo = document.querySelector('.nav__item--logo'),
+      headerInfo = document.querySelector('.header__info'),
+      burgerOpen = document.querySelector('.burger__open'),
+      burgerClosed = document.querySelector('.burger__closed'),
+      navItemSelect = document.querySelector('.nav__item--select'),
+      firstSelect = document.querySelector('.first-select'),
+      secondSelect = document.querySelector('.second-select'),
+      firstArrow = document.querySelector('.first-select svg'),
+      secondArrow = document.querySelector('.second-select svg'),
+      firstList = document.querySelector('.first-list'),
+      secondList = document.querySelector('.second-list'),
+      contentForm = document.querySelector('.content__form'),
+      slide2 = document.querySelector('.slide-2'),
+      nav = document.querySelector('.nav__list'),
+      navLinkDistribution = document.querySelector('.nav__link--distribution'),
+      TIME_OUT = 500;
 
-var generateMobileMenu = function () {
-    var element = document.createElement('a');
+const generateMobileMenu = () => {
+    let element = document.createElement('a');
     element.classList.add('header__logo');
-    element.innerHTML = '<img class="nav__img" src="img/logo.png" srcset="img/logo@2x.png 2x" alt="">';
+    element.innerHTML = '<img class="nav__img" src="img/logo.png" srcset="img/logo2x.png 2x" alt="">';
     headerInfo.insertAdjacentElement('afterbegin', element);
     navItemLogo.remove();
 }
 
-var moveSlideContent = function () {
-    var fragment = document.createDocumentFragment();
-    var element = contentForm.cloneNode(true);
+const moveSlideContent = () => {
+    let fragment = document.createDocumentFragment();
+    let element = contentForm.cloneNode(true);
     fragment.appendChild(element);
     slide2.innerHTML = '';
     slide2.appendChild(fragment);
     contentForm.remove();
 }
 
-var showList = function (element, select) {
-    navDistribution.style.marginBottom = '141px';
-    select.style.marginBottom = '150px';
-    element.style.opacity = '1';
-    element.style.display = 'block';
-}
-
-var hideList = function (element, select) {
-    navDistribution.style.marginBottom = '';
-    select.style.marginBottom = '';
-    element.style.opacity = '0';
-    element.style.display = 'none';
-}
-
-var checkClientWidth = function () {
-    var width = document.body.clientWidth;
+const checkClientWidth = () => {
+    let width = document.body.clientWidth;
     if (width <= 768) {
         generateMobileMenu();
         moveSlideContent();
     }
+    if (width <= 480) {
+        navLinkDistribution.style.display = 'none';
+    }
 }
 checkClientWidth();
 
-var onDocumentScroll = function () {
-    var img = document.querySelector('.nav__img');
-    var scrolled = window.pageYOffset;
+const onDocumentScroll = () => {
+    let img = document.querySelector('.nav__img');
+    let scrolled = window.pageYOffset;
     if (scrolled > 0) {
         header.classList.add('scrolled');
         img.style.opacity = '0';
@@ -75,64 +64,41 @@ var onDocumentScroll = function () {
     }
 };
 
+const onSelectClick = (target) => {
+    if (target.closest('.first-select')) {
+        header.classList.toggle('select-opened');
+        setTimeout(() => {
+            firstSelect.classList.toggle('opened');
+            firstList.classList.toggle('visible');
+            firstArrow.classList.toggle('active');
+        }, TIME_OUT);
+    }
+    if (target.closest('.second-select')) {
+        secondSelect.classList.toggle('opened');
+        secondList.classList.toggle('visible');
+        secondArrow.classList.toggle('active');
+        setTimeout(() => {
+            header.classList.toggle('select-opened');
+        }, TIME_OUT);
+    }
+} 
+
 window.addEventListener('scroll', onDocumentScroll);
-burger.addEventListener('click', function () {
+burger.addEventListener('click', () => {
     header.classList.toggle('menu-opened');
 });
-
-var Listeners = function (show, hide) {
-    firstSelect.addEventListener(show, function (e) {
-        var target = e.target;
-        if (target) {
-            header.style.minHeight = '245px';
-            firstArrow.style.transform = 'rotate(180deg)';
-            setTimeout(function(){
-                showList(firstList, firstSelect);
-            }, TIME_OUT)
-        }
-    });
-    firstSelect.addEventListener(hide, function (e) {
-        var target = e.target;
-        if (target) {
-            firstArrow.style.transform = '';
-            hideList(firstList, firstSelect);
-            header.style.minHeight = '130px';
-        }
-    });
-    secondSelect.addEventListener(show, function (e) {
-        var target = e.target;
-        if (target) {
-            header.style.minHeight = '245px';
-            secondArrow.style.transform = 'rotate(180deg)';
-            setTimeout(function(){
-                showList(secondList, secondSelect);
-            }, TIME_OUT)
-        }
-    });
-    secondSelect.addEventListener(hide, function (e) {
-    var target = e.target;
-    if (target) {
-        secondArrow.style.transform = '';
-        hideList(secondList, secondSelect);
-        header.style.minHeight = '130px';
-    }
+nav.addEventListener('click', (e) => {
+    let target = e.target;
+    e.preventDefault();
+    onSelectClick(target);
 });
-}
 
-var checkDevice = function () {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        Listeners('click')
-    } else {
-        Listeners('mouseenter', 'mouseleave');
-    }
-}
-checkDevice();
-
-var mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 60,
     initialSlide: 0,
     loop: true,
+    preventClicks: true,
 
     breakpoints: {     
         480: {       
@@ -154,6 +120,7 @@ var mySwiper = new Swiper('.swiper-container', {
 
     navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-disabled',
     }
 })
+

@@ -8,7 +8,7 @@
    .header__phone {
        order: 2;
        width: 20%;
-       margin-top: 1px;
+       margin-top: -2px;
    }
 }
 
