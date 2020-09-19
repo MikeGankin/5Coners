@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Avenir Next Cyr', sans-serif;
     font-display: swap;
-    src: url(/fonts/AvenirNextCyr-Regular.woff) format("woff"), 
+    src: url(../fonts/AvenirNextCyr-Regular.woff) format("woff"), 
          url(/fonts/AvenirNextCyr-Regular.woff2) format("woff2");
     font-style: normal;
     font-weight: 400
@@ -10,8 +10,8 @@
 @font-face {
     font-family: 'Avenir Next Cyr', sans-serif;
     font-display: swap;
-    src: url(/fonts/AvenirNextCyr-Demi.woff) format("woff"), 
-         url(/fonts/AvenirNextCyr-Demi.woff2) format("woff2");
+    src: url(../fonts/AvenirNextCyr-Demi.woff) format("woff"), 
+         url(../fonts/AvenirNextCyr-Demi.woff2) format("woff2");
     font-style: normal;
     font-weight: 600
 }
@@ -19,8 +19,8 @@
 @font-face {
     font-family: 'Avenir Next Cyr', sans-serif;
     font-display: swap;
-    src: url(/fonts/AvenirNextCyr-Bold.woff) format("woff"), 
-         url(/fonts/AvenirNextCyr-Bold.woff2) format("woff2");
+    src: url(../fonts/AvenirNextCyr-Bold.woff) format("woff"), 
+         url(../fonts/AvenirNextCyr-Bold.woff2) format("woff2");
     font-style: normal;
     font-weight: 800
 }
@@ -61,7 +61,7 @@ img {
     width: 1920px;
     overflow: hidden;
     margin: 0 auto;
-    background-image: url(/img/stars.png), url(/img/sky.png); 
+    background-image: url(../img/stars.png), url(../img/sky.png); 
     background-repeat: no-repeat, no-repeat;
     background-position: 0 128px, 0 0
 }
@@ -70,7 +70,7 @@ img {
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .container {
-        background-image: url(/img/stars2x.png), url(/img/sky2x.png);
+        background-image: url(../img/stars2x.png), url(../img/sky2x.png);
         background-size: contain
     }
 }
