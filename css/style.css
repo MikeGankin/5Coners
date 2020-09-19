@@ -61,7 +61,7 @@ img {
     width: 1920px;
     overflow: hidden;
     margin: 0 auto;
-    background-image: url(5Coners/img/stars.png), url(5Coners/img/sky.png); 
+    background-image: url(/5Coners/img/stars.png), url(/5Coners/img/sky.png); 
     background-repeat: no-repeat, no-repeat;
     background-position: 0 128px, 0 0
 }
@@ -70,7 +70,7 @@ img {
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .container {
-        background-image: url(5Coners/img/stars2x.png), url(5Coners/img/sky2x.png);
+        background-image: url(/5Coners/img/stars2x.png), url(/5Coners/img/sky2x.png);
         background-size: contain
     }
 }
