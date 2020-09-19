@@ -1062,3 +1062,9 @@ img {
 .form__btn:hover {
     opacity: .8
 }
+
+@media (max-width: 480px) {
+    .select-list__item:first-child {
+        margin-top: 45px;
+    }
+}
